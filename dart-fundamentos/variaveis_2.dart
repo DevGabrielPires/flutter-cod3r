@@ -10,8 +10,12 @@ void main() {
 
   print(t1 + t2);
 
+  //verifica os tipos das variaveis
   print(n1.runtimeType);
   print(n2.runtimeType);
   print(t1.runtimeType);
   print(t2.runtimeType);
+
+  print(n1 is String);
+  print(n2 is int);
 }
