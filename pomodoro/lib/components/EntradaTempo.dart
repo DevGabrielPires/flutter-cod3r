@@ -35,7 +35,7 @@ class EntradaTempo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: this.dec,
+              onPressed: dec,
               child: const Icon(
                 Icons.arrow_downward,
                 color: Colors.white,
@@ -53,7 +53,7 @@ class EntradaTempo extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: this.inc,
+              onPressed: inc,
               child: const Icon(
                 Icons.arrow_upward,
                 color: Colors.white,
