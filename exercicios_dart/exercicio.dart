@@ -26,19 +26,16 @@ main() {
     // print(nomes[0]);
   }
   {
-    Set<int> cojuntppp = {1, 0};
+    Set<int> cojuntoApp = {1, 0};
     var conjunto = {
       0,
       1,
       2,
       3,
       4,
-      4,
-      4,
-      4,
     };
-    // print(conjunto);
-    // print(cojuntppp);
+    print(conjunto);
+    print(cojuntoApp);
     // print(conjunto.length);
     // print(conjunto is Set);
   }
@@ -65,15 +62,19 @@ main() {
     dynamic x = 'teste';
     x = 123;
     x = false;
+    print(x);
   }
   {
     var f = 2;
     f = 4;
 
+    print(f);
+
     final g = 3;
     // g = 34;
-
+    print(g);
     const h = 3;
     // h = 4;
+    print(h);
   }
 }
