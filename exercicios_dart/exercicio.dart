@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, equal_elements_in_set
+
 main() {
   {
     int a = 3;
@@ -10,6 +12,7 @@ main() {
     print(b);
     print(estaChovendo);
     print(estaFrio);
+    // ignore: unnecessary_type_check
     print(c is String);
   }
   {
