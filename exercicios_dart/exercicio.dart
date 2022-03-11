@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, equal_elements_in_set
+
 main() {
   {
     int a = 3;
