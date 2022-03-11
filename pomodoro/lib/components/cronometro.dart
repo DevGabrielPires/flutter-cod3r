@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:pomodoro/components/CronometroBotao.dart';
+import 'package:pomodoro/components/cronometro_botao.dart';
 import 'package:pomodoro/store/pomodoro.store.dart';
 import 'package:provider/provider.dart';
 
 class Cronometro extends StatelessWidget {
+  // ignore: non_constant_identifier_names
   const Cronometro({Key? Key}) : super(key: Key);
 
   @override

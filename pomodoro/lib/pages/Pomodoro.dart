@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:pomodoro/components/Cronotmetro.dart';
-import 'package:pomodoro/components/EntradaTempo.dart';
+import 'package:pomodoro/components/cronometro.dart';
+import 'package:pomodoro/components/Entrada_tempo.dart';
 import 'package:pomodoro/store/pomodoro.store.dart';
 import 'package:provider/provider.dart';
 
