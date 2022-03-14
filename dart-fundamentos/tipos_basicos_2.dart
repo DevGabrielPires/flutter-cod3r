@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_type_check
 
 main() {
-  List aprovados = ['Ana', 'Carlos', 'Daniel', 'Rafael'];
+  List<String> aprovados = ['Ana', 'Carlos', 'Daniel', 'Rafael'];
   print(aprovados is List);
   print(aprovados);
   print(aprovados.elementAt(1));
