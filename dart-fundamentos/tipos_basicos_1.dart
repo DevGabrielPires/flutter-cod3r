@@ -5,7 +5,7 @@ main() {
   num n4 = 6;
 
   print(n1 + n2 + n3 + n4);
-  n4 = 5;
+  n4 = 5.45;
 
   print(n1 + n2 + n3 + n4);
 

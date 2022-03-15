@@ -10,6 +10,11 @@ void main() {
 
   print(t1 + t2);
 
+  dynamic b = 22;
+  print('antes de mudar: ' + b.toString());
+  b = 'sadfasdada';
+  print('depois de mudar: ' + b);
+
   //verifica os tipos das variaveis
   print(n1.runtimeType);
   print(n2.runtimeType);
