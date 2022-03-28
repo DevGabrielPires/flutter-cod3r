@@ -1,29 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_perguntas/botao.dart';
+import './questao.dart';
 
 void main(List<String> args) {
   runApp(const PerguntaApp());
 }
 
 class _PerguntaAppState extends State<PerguntaApp> {
-  var perguntaSelecionada = 0;
+  var _perguntaSelecionada = 0;
 
   void _responder() {
     setState(() {
-      if (perguntaSelecionada < 1) {
-        perguntaSelecionada++;
+      if (_perguntaSelecionada < 2) {
+        _perguntaSelecionada++;
       } else {
-        perguntaSelecionada = 0;
+        _perguntaSelecionada = 0;
       }
     });
-    print(perguntaSelecionada);
   }
 
   @override
   Widget build(BuildContext context) {
-    final List<String> perguntas = [
-      'Qual é a sua cor favorita?',
-      'Qual é o seu animal favorito?',
+    final List<Map<String, Object>> perguntas = [
+      {
+        'texto': 'Qual é a sua cor favorita?',
+        'respostas': ['Rosa', 'Azul', 'Verde', 'Preto']
+      },
+      {
+        'texto': 'Qual é o seu animal favorito?',
+        'respostas': ['Raposa', 'Arara', 'Viado', 'Passáro']
+      },
+      {
+        'texto': 'Qual é o seu nome favorito?',
+        'respostas': ['Ana', 'Clara', 'Gabriel', 'Franciele']
+      },
     ];
+
+    List<Widget> respostas = [];
+
+    for (String textoResposta
+        in perguntas[_perguntaSelecionada].cast()['respostas']) {
+      respostas.add(Botao(textoResposta, _responder));
+    }
+
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
@@ -31,23 +50,11 @@ class _PerguntaAppState extends State<PerguntaApp> {
           ),
           body: Column(
             children: <Widget>[
-              Text(
-                perguntas[perguntaSelecionada],
-              ),
-              ElevatedButton(
-                child: const Text('Resposta 1'),
-                onPressed: _responder,
-              ),
-              ElevatedButton(
-                child: const Text('Resposta 2'),
-                onPressed: _responder,
-              ),
-              ElevatedButton(
-                child: const Text('Resposta 3'),
-                onPressed: _responder,
-              )
+              Questao(perguntas[_perguntaSelecionada]['texto'].toString()),
+              ...respostas
             ],
           )),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
