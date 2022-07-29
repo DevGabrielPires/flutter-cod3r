@@ -11,9 +11,19 @@ class Data {
 
   //Faz a mesma coisa que o código comentado acima. porem de uma forma mais simples
   Data([this.dia = 1, this.mes = 1, this.ano = 1970]);
+  //Named Constructors
+  Data.com({this.dia = 1, this.mes = 1, this.ano = 1970});
+  Data.ultimoDiaDoAno(this.ano) {
+    dia = 31;
+    mes = 12;
+  }
 
   String obterFormatada() {
     return "$dia/$mes/$ano";
+  }
+
+  String toString() {
+    return obterFormatada();
   }
 }
 
@@ -25,14 +35,21 @@ void main() {
   // dataAniversario.ano = 2020;
 
   Data dataCompra = Data(1, 1, 1970);
-
-  dataCompra.dia = 23;
+  // dataCompra.dia = 23;
   dataCompra.mes = 12;
   dataCompra.ano = 2021;
 
-  print(dataAniversario.obterFormatada());
-  String dataCompraFormatada = dataCompra.obterFormatada();
-  print(dataCompraFormatada);
+  String d1 = dataAniversario.obterFormatada();
 
-  print(Data());
+  print("A data do aniversário é $d1");
+  print("A data do compra é ${dataCompra.obterFormatada()}");
+
+  print(dataCompra);
+  print(dataCompra.toString());
+
+  print(new Data());
+  print(Data.com(ano: 2020));
+  print(Data.com(mes: 12));
+  print(Data.com(dia: 7));
+  print(Data.ultimoDiaDoAno(12));
 }
